@@ -5,7 +5,6 @@
   <meta name="description" content="Dr. Glauber Tercio de Almeida – Otorrinolaringologista em Maringá. Atendimento particular e por convênios na Facial Clinic.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Glauber Tercio de Almeida | Otorrinolaringologia</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -41,7 +40,7 @@
       width: 250px;
       max-width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      /* removido box-shadow pois logo tem fundo branco */
     }
     #hero .hero-text {
       flex: 2 1 300px;
@@ -150,12 +149,12 @@
       color: #0066cc;
       font-weight: 600;
     }
-    /* SCROLL SUAVE */
     html {
       scroll-behavior: smooth;
     }
   </style>
 </head>
+
 <!-- Botão flutuante do WhatsApp -->
 <a
   href="https://wa.me/554491423282?text=Olá,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber."
@@ -177,26 +176,25 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: transform 0.2s;
   }
-
   .whatsapp-float:hover {
     transform: scale(1.1);
   }
-
   .whatsapp-float img {
     display: block;
   }
 </style>
+
 <body>
 
   <!-- HERO SECTION -->
   <section id="hero">
     <div class="hero-image">
-      <!-- Substitua "foto-1.jpg" pela sua imagem -->
-      <img src="foto-1.jpg" alt="Dr. Glauber Tercio de Almeida">
+      <!-- LOGO NOVO -->
+      <img src="logo-novo.png" alt="Logo Dr. Glauber Tercio de Almeida - Otorrinolaringologista">
     </div>
     <div class="hero-text">
       <h1>Cuide da saúde de seu nariz, ouvido e garganta</h1>
-      <p>Sintomas como nariz entupido ou com coceira, espirros, coriza, zumbido, perda auditiva e tonturas não precisam ser encarados como parte da rotina. Eles devem ser avaliados cuidadosamente para identificar o possível diagnóstico e, quando necessário, receber tratamento individualizado com base nas melhores evidências científicas..</p>
+      <p>Sintomas como nariz entupido ou com coceira, espirros, coriza, zumbido, perda auditiva e tonturas não precisam ser encarados como parte da rotina. Eles devem ser avaliados cuidadosamente para identificar o possível diagnóstico e, quando necessário, receber tratamento individualizado com base nas melhores evidências científicas.</p>
       <div class="hero-buttons">
         <a href="#especialidades" class="btn-especialidade">Conhecer a especialidade</a>
         <a href="#sobre" class="btn-doutor">Conhecer o doutor</a>
@@ -207,7 +205,6 @@
   <!-- SOBRE O DOUTOR -->
   <section id="sobre">
     <div class="sobre-image">
-      <!-- Substitua "foto-2.jpg" pela sua imagem -->
       <img src="foto-2.jpg" alt="Dr. Glauber Tercio de Almeida">
     </div>
     <div class="sobre-text">
@@ -265,19 +262,18 @@
   <section id="local">
     <h2>Local de Atendimento</h2>
     <p><strong>Facial Clinic</strong> – Centro Médico Ingá - Av. Dr. Luiz Teixeira Mendes, 1798 - Sala 202/203 - Zona 05, Maringá - PR</p>
-   <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3453574420387!2d-51.9609780613328!3d-23.435537133771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd716494f64b1%3A0x15f6a76b0357c294!2sAv.%20Dr.%20Luiz%20Teixeira%20Mendes%2C%201798%20-%20Zona%2005%2C%20Maring%C3%A1%20-%20PR%2C%2087015-001!5e0!3m2!1spt-BR!2sbr!4v1743648045275!5m2!1spt-BR!2sbr"
-  width="100%"
-  height="450"
-  frameborder="0"
-  style="border:0;"
-  allowfullscreen=""
-  aria-hidden="false"
-  tabindex="0"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3453574420387!2d-51.9609780613328!3d-23.435537133771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd716494f64b1%3A0x15f6a76b0357c294!2sAv.%20Dr.%20Luiz%20Teixeira%20Mendes%2C%201798%20-%20Zona%2005%2C%20Maring%C3%A1%20-%20PR%2C%2087015-001!5e0!3m2!1spt-BR!2sbr!4v1743648045275!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="450"
+      frameborder="0"
+      style="border:0;"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <!-- RODAPÉ -->
