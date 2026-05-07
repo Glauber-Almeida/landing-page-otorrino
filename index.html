@@ -1,366 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16855928466"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16855928466');
-        </script>
-        <meta charset="UTF-8">
-        <meta name="description" content="Dr. Glauber Tercio de Almeida – Otorrinolaringologista em Maringá. Atende Unimed e particular. Agende pelo WhatsApp.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dr. Glauber Tercio de Almeida | Otorrinolaringologista em Maringá | Unimed e Particular</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        header, section, footer {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        /* FAIXA DE CONVENIOS */
-        #faixa-convenio {
-            background-color: #003366;
-            color: #fff;
-            text-align: center;
-            padding: 12px 20px;
-            font-size: 1em;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        #faixa-convenio span {
-            margin: 0 12px;
-        }
-        /* HERO SECTION */
-        #hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            background: #f0f8ff;
-            padding: 60px 20px;
-        }
-        #hero .hero-image {
-            flex: 1 1 250px;
-            text-align: center;
-            padding: 10px;
-        }
-        #hero .hero-image img {
-            width: 250px;
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        #hero .hero-text {
-            flex: 2 1 300px;
-            padding: 10px 20px;
-        }
-        #hero h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            color: #003366;
-        }
-        #hero p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-        #hero .hero-buttons a {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 5px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        #hero .hero-buttons a:hover {
-            opacity: 0.9;
-        }
-        .btn-whatsapp-hero {
-            background-color: #25d366;
-            color: #fff;
-            font-size: 1.1em;
-            padding: 14px 28px !important;
-            border-radius: 8px !important;
-        }
-        .btn-especialidade {
-            background-color: #0055aa;
-            color: #fff;
-        }
-        .btn-doutor {
-            background-color: #0088cc;
-            color: #fff;
-        }
-        /* BLOCO DE CONVENIOS */
-        #convenios {
-            background-color: #e8f4fd;
-            padding: 30px 20px;
-            text-align: center;
-            border-top: 3px solid #0055aa;
-            border-bottom: 3px solid #0055aa;
-        }
-        #convenios h2 {
-            font-size: 1.5em;
-            color: #003366;
-            margin-bottom: 15px;
-        }
-        #convenios .convenio-lista {
-            font-size: 1.1em;
-            color: #003366;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        #convenios .btn-agendar-conv {
-            display: inline-block;
-            background-color: #25d366;
-            color: #fff;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1em;
-        }
-        /* SOBRE O DOUTOR */
-        #sobre {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 60px 20px;
-        }
-        #sobre .sobre-image {
-            flex: 1 1 300px;
-            text-align: center;
-            padding: 10px;
-        }
-        #sobre .sobre-image img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        #sobre .sobre-text {
-            flex: 2 1 300px;
-            padding: 10px 20px;
-        }
-        #sobre h2 {
-            font-size: 1.8em;
-            color: #003366;
-            margin-bottom: 20px;
-        }
-        /* ESPECIALIDADES */
-        #especialidades {
-            background-color: #f9f9f9;
-            padding: 60px 20px;
-        }
-        #especialidades h2 {
-            text-align: center;
-            font-size: 1.8em;
-            color: #003366;
-            margin-bottom: 40px;
-        }
-        .especialidade-item {
-            margin-bottom: 40px;
-        }
-        .especialidade-item h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        .especialidade-item p {
-            font-size: 1.1em;
-            margin: 0;
-        }
-        /* LOCAL DE ATENDIMENTO */
-        #local {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        #local h2 {
-            font-size: 1.8em;
-            color: #003366;
-            margin-bottom: 20px;
-        }
-        #local p {
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-        /* RODAPE */
-        footer {
-            background-color: #eee;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-        footer a {
-            color: #0066cc;
-            font-weight: 600;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        /* WHATSAPP FLOAT */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            background-color: #25d366;
-            border-radius: 50%;
-            padding: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-        .whatsapp-float img {
-            display: block;
-        }
-        </style>
-    </head>
-    <body>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16855928466"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-16855928466');
+</script>
+<meta charset="UTF-8">
+<meta name="description" content="Dr. Glauber Tercio de Almeida - Otorrinolaringologista em Maringa. Atende Unimed e particular. Agende pelo WhatsApp.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Glauber Tercio de Almeida | Otorrinolaringologista em Maringa | Unimed e Particular</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
+#hero { display: flex; flex-wrap: wrap; align-items: center; background: #f0f8ff; padding: 60px 20px; }
+#hero .hero-image { flex: 1 1 250px; text-align: center; padding: 10px; }
+#hero .hero-image img { width: 250px; max-width: 100%; border-radius: 10px; }
+#hero .hero-text { flex: 2 1 300px; padding: 10px 20px; }
+#hero h1 { font-size: 2.2em; margin-bottom: 10px; color: #003366; }
+#hero p { font-size: 1.1em; margin-bottom: 20px; }
+#hero .hero-buttons a { display: inline-block; padding: 12px 20px; border-radius: 6px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; transition: opacity 0.3s; }
+#hero .hero-buttons a:hover { opacity: 0.85; }
+.btn-whatsapp-hero { background-color: #25d366; color: #fff; font-size: 1.05em; }
+.btn-especialidade { background-color: #0055aa; color: #fff; }
+.btn-doutor { background-color: #0088cc; color: #fff; }
+#sobre { display: flex; flex-wrap: wrap; align-items: center; padding: 60px 20px; }
+#sobre .sobre-image { flex: 1 1 300px; text-align: center; padding: 10px; }
+#sobre .sobre-image img { width: 100%; max-width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+#sobre .sobre-text { flex: 2 1 300px; padding: 10px 20px; }
+#sobre h2 { font-size: 1.8em; color: #003366; margin-bottom: 20px; }
+#especialidades { background-color: #f9f9f9; padding: 60px 20px; }
+#especialidades h2 { text-align: center; font-size: 1.8em; color: #003366; margin-bottom: 40px; }
+.especialidade-item { margin-bottom: 40px; }
+.especialidade-item h3 { font-size: 1.3em; margin-bottom: 10px; }
+.especialidade-item p { font-size: 1.1em; margin: 0; }
+#local { padding: 60px 20px; text-align: center; }
+#local h2 { font-size: 1.8em; color: #003366; margin-bottom: 20px; }
+#local p { font-size: 1.1em; margin-bottom: 5px; }
+footer { background-color: #003366; color: #fff; text-align: center; padding: 30px 20px; font-size: 0.95em; }
+footer a { color: #7ec8f7; font-weight: 600; }
+.footer-convenios { background-color: #002244; padding: 16px 20px; text-align: center; font-size: 1em; font-weight: 600; color: #fff; border-top: 2px solid #25d366; }
+.footer-convenios span { margin: 0 10px; }
+.btn-footer-whatsapp { display: inline-block; margin-top: 12px; background-color: #25d366; color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 1em; }
+html { scroll-behavior: smooth; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; background-color: #25d366; border-radius: 50%; padding: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s; }
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float img { display: block; }
+</style>
+</head>
+<body>
 
-        <!-- FAIXA DE CONVENIOS NO TOPO -->
-        <div id="faixa-convenio">
-              ✅ <span>Atende Unimed</span> · <span>Atende Particular</span> · <span>📱 Agende pelo WhatsApp: (44) 99142-3282</span>
-        </div>div>
-    
-    <!-- Botao flutuante do WhatsApp -->
-    <a
-        href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber."
-        class="whatsapp-float"
-        target="_blank"
-        title="Agende pelo WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50" />
-    </a>a>
-    
-    <!-- HERO SECTION -->
-    <section id="hero">
-    <div class="hero-image">
+<!-- Botao flutuante WhatsApp -->
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="whatsapp-float" target="_blank" title="Agende pelo WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50" />
+</a>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-image">
     <img src="logo-novo.png" alt="Logo Dr. Glauber Tercio de Almeida - Otorrinolaringologista">
-    </div>div>
-    <div class="hero-text">
+  </div>
+  <div class="hero-text">
     <h1>Cuide da saude de seu nariz, ouvido e garganta</h1>
-    <p>Sintomas como nariz entupido ou com coceira, espirros, coriza, zumbido, perda auditiva e tonturas nao precisam ser encarados como parte da rotina. Agende sua consulta com um especialista em Maringa.</p>
+    <p>Sintomas como nariz entupido, espirros, zumbido, perda auditiva e tonturas devem ser avaliados por um especialista. Agende sua consulta em Maringa.</p>
     <div class="hero-buttons">
-    <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-whatsapp-hero" target="_blank">📱 Agendar pelo WhatsApp</a>a>
-    <a href="#especialidades" class="btn-especialidade">Ver especialidades</a>a>
-    <a href="#sobre" class="btn-doutor">Conhecer o doutor</a>a>
-    </div>div>
-    </div>div>
-    </section>section>
-    
-    <!-- BLOCO DE CONVENIOS -->
-    <section id="convenios">
-    <h2>💳 Formas de Atendimento</h2>
-    <div class="convenio-lista">
-    ✅ Unimed &nbsp;|&nbsp; ✅ Particular &nbsp;|&nbsp; ✅ Outros convênios – consulte disponibilidade
-    </div>div>
-    <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber.+Tenho+plano+de+saude." class="btn-agendar-conv" target="_blank">
-    📱 Agendar Consulta pelo WhatsApp
-    </a>a>
-    </section>section>
-    
-    <!-- SOBRE O DOUTOR -->
-    <section id="sobre">
-    <div class="sobre-image">
-    <img src="foto-2.jpg" alt="Dr. Glauber Tercio de Almeida">
-    </div>div>
-    <div class="sobre-text">
-    <h2>Sobre o Dr. Glauber</h2>
-    <p>Sou Glauber Almeida, otorrinolaringologista, formado em Medicina pela Universidade Estadual de Maringa, Residencia Medica em Otorrinolaringologia pela Universidade Estadual de Londrina, Titulo de Especialista em Otorrinolaringologia pela AMB/ABORL. Atuo como otorrinolaringologista na cidade de Maringa PR, com foco no diagnostico e tratamento das doencas de ouvido, nariz e garganta. Meu objetivo e oferecer um cuidado individualizado e embasado.</p>
-    </div>div>
-    </section>section>
-    
-    <!-- ESPECIALIDADES -->
-    <section id="especialidades">
-    <h2>O que o Otorrinolaringologista trata</h2>
-    
-    <div class="especialidade-item">
-    <h3>👃 Rinite Alergica</h3>
-    <p>A rinite alergica e uma resposta exagerada a alergenios como poeira, polen e acaros, provocando espirros, nariz entupido, coriza e coceira. O tratamento inclui medicamentos, imunoterapia e medidas de prevencao.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>🤧 Sinusite (Rinossinusite)</h3>
-    <p>Inflamacao dos seios da face que pode causar dor facial, nariz entupido e secrecao nasal espessa. O tratamento varia conforme a causa, podendo incluir analgesicos, antibioticos e lavagem nasal.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>👂 Otite</h3>
-    <p>A otite pode afetar o ouvido externo ou medio, causando dor, sensacao de ouvido tampado, diminuicao da audicao e, as vezes, febre. O tratamento e individualizado conforme o tipo e a gravidade.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>🔊 Perda Auditiva</h3>
-    <p>A perda auditiva pode ocorrer de forma progressiva ou subita, influenciada por fatores como envelhecimento, exposicao a ruidos e infeccoes. Avaliacao e tratamento especificos sao fundamentais.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>🌀 Zumbido (Tinnitus)</h3>
-    <p>O zumbido e a percepcao de som sem fonte externa, frequentemente associado a perda auditiva, estresse ou problemas circulatorios. Diversas abordagens podem ajudar a controlar esse sintoma.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>😵 Tontura</h3>
-    <p>A tontura pode ter origem vestibular ou nao, e nem sempre esta ligada a labirintite. Uma avaliacao cuidadosa e essencial para identificar a causa e definir o tratamento adequado.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>😷 Amigdalas e Adenoide</h3>
-    <p>Problemas nas amigdalas ou adenoides podem causar obstrucao nasal e infeccoes recorrentes. O diagnostico e feito por meio do exame fisico e de exames de imagem, definindo a melhor abordagem terapeutica.</p>
-    </div>div>
-    
-    <div class="especialidade-item">
-    <h3>😮 Ronco e Apneia do Sono</h3>
-    <p>Ronco e apneia podem impactar a qualidade do sono e a saude geral. O tratamento pode incluir mudancas de habitos, aparelhos intraorais, CPAP ou intervencoes cirurgicas, conforme a avaliacao especializada.</p>
-    </div>div>
-    </section>section>
-    
-    <!-- LOCAL DE ATENDIMENTO -->
-    <section id="local">
-    <h2>Local de Atendimento</h2>
-    <p><strong>Facial Clinic</strong> - Centro Medico Inga - Av. Dr. Luiz Teixeira Mendes, 1798 - Sala 202/203 - Zona 05, Maringa - PR</p>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3453574420387!2d-51.9609780613328!3d-23.435537133771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd716494f64b1%3A0x15f6a76b0357c294!2sAv.%20Dr.%20Luiz%20Teixeira%20Mendes%2C%201798%20-%20Zona%2005%2C%20Maring%C3%A1%20-%20PR%2C%2087015-001!5e0!3m2!1spt-BR!2sbr!4v1743648045275!5m2!1spt-BR!2sbr"
-        width="100%"
-        height="450"
-        frameborder="0"
-        style="border:0;"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>iframe>
-    </section>section>
-    
-    <!-- RODAPE -->
-    <footer>
-        <p>Dr. Glauber Tercio de Almeida - Otorrinolaringologista | CRM 24537PR | RQE 31190</p>
-    <p>Atende Unimed e Particular | Facial Clinic - Maringa PR</p>
-    <p>
-        📱 Agende sua consulta:
-        <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." target="_blank">WhatsApp (44) 99142-3282</a>a>
-    </p>
-        <p>Esta pagina tem carater informativo e nao substitui uma consulta medica presencial.</p>
-    </footer>
+      <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-whatsapp-hero" target="_blank">&#128241; Agendar pelo WhatsApp</a>
+      <a href="#especialidades" class="btn-especialidade">Ver especialidades</a>
+      <a href="#sobre" class="btn-doutor">Conhecer o doutor</a>
+    </div>
+  </div>
+</section>
 
-    </body>
-</html>html>
-    </p></p>
-    </footer></strong></p></p></h1></span></span>
-    </body>
-    </style></title>
-        </script>
-    </head>
+<!-- SOBRE O DOUTOR -->
+<section id="sobre">
+  <div class="sobre-image">
+    <img src="foto-2.jpg" alt="Dr. Glauber Tercio de Almeida">
+  </div>
+  <div class="sobre-text">
+    <h2>Sobre o Dr. Glauber</h2>
+    <p>Sou Glauber Almeida, otorrinolaringologista, formado em Medicina pela Universidade Estadual de Maringa, com Residencia Medica em Otorrinolaringologia pela Universidade Estadual de Londrina e Titulo de Especialista pela AMB/ABORL. Atuo em Maringa com foco no diagnostico e tratamento das doencas de ouvido, nariz e garganta, oferecendo um cuidado individualizado e baseado em evidencias.</p>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section id="especialidades">
+  <h2>O que o Otorrinolaringologista trata</h2>
+  <div class="especialidade-item"><h3>&#128067; Rinite Alergica</h3><p>Resposta exagerada a alergenios como poeira, polen e acaros, causando espirros, nariz entupido e coriza. O tratamento inclui medicamentos e imunoterapia.</p></div>
+  <div class="especialidade-item"><h3>&#129301; Sinusite (Rinossinusite)</h3><p>Inflamacao dos seios da face causando dor facial, nariz entupido e secrecao nasal espessa. O tratamento varia conforme a causa.</p></div>
+  <div class="especialidade-item"><h3>&#128066; Otite</h3><p>Inflamacao do ouvido externo ou medio, causando dor, sensacao de ouvido tampado e diminuicao da audicao.</p></div>
+  <div class="especialidade-item"><h3>&#128266; Perda Auditiva</h3><p>Pode ocorrer de forma progressiva ou subita. Avaliacao e tratamento especificos sao fundamentais.</p></div>
+  <div class="especialidade-item"><h3>&#127744; Zumbido (Tinnitus)</h3><p>Percepcao de som sem fonte externa, associado a perda auditiva ou estresse. Diversas abordagens podem ajudar.</p></div>
+  <div class="especialidade-item"><h3>&#128565; Tontura</h3><p>Pode ter origem vestibular ou nao. Uma avaliacao cuidadosa e essencial para identificar a causa e o tratamento.</p></div>
+  <div class="especialidade-item"><h3>&#128567; Amigdalas e Adenoide</h3><p>Problemas nas amigdalas ou adenoides podem causar obstrucao nasal e infeccoes recorrentes. Diagnostico pelo exame fisico e imagem.</p></div>
+  <div class="especialidade-item"><h3>&#128558; Ronco e Apneia do Sono</h3><p>Ronco e apneia impactam a qualidade do sono e a saude geral. O tratamento e individualizado conforme avaliacao especializada.</p></div>
+</section>
+
+<!-- LOCAL DE ATENDIMENTO -->
+<section id="local">
+  <h2>Local de Atendimento</h2>
+  <p><strong>Facial Clinic</strong> - Centro Medico Inga - Av. Dr. Luiz Teixeira Mendes, 1798 - Sala 202/203 - Zona 05, Maringa - PR</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3453574420387!2d-51.9609780613328!3d-23.435537133771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd716494f64b1%3A0x15f6a76b0357c294!2sAv.%20Dr.%20Luiz%20Teixeira%20Mendes%2C%201798%20-%20Zona%2005%2C%20Maring%C3%A1%20-%20PR%2C%2087015-001!5e0!3m2!1spt-BR!2sbr!4v1743648045275!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- RODAPE COM CONVENIOS -->
+<div class="footer-convenios">
+  <div>&#9989; Atende Unimed &nbsp;|&nbsp; &#9989; Particular &nbsp;|&nbsp; &#9989; Outros convenios - consulte disponibilidade</div>
+  <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-footer-whatsapp" target="_blank">&#128241; Agendar Consulta pelo WhatsApp</a>
+</div>
+
+<footer>
+  <p>Dr. Glauber Tercio de Almeida - Otorrinolaringologista | CRM 24537PR | RQE 31190</p>
+  <p>Facial Clinic - Maringa PR &nbsp;|&nbsp; <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." target="_blank">WhatsApp (44) 99142-3282</a></p>
+  <p style="font-size:0.8em;color:#aaa;margin-top:10px;">Esta pagina tem carater informativo e nao substitui uma consulta medica presencial.</p>
+</footer>
+
+</body>
+</html>
