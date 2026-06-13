@@ -37,7 +37,7 @@ section > h2 { text-align: center; font-size: 2rem; color: var(--primary); margi
 #hero { background: linear-gradient(180deg, #eef7ff 0%, #ffffff 100%); padding: 76px 24px; }
 .hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 56px; align-items: center; }
 #hero .hero-image { text-align: center; }
-#hero .hero-image img { width: 260px; max-width: 100%; background: #fff; border-radius: 8px; padding: 24px; box-shadow: var(--shadow); }
+#hero .hero-image img { display: block; width: 260px; max-width: 100%; aspect-ratio: 1 / 1; object-fit: contain; margin: 0 auto; background: #fff; border-radius: 8px; padding: 24px; box-shadow: var(--shadow); }
 #hero .eyebrow { display: inline-block; margin: 0 0 12px; color: var(--teal); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 #hero h1 { font-size: 2.6rem; line-height: 1.18; margin: 0 0 16px; color: var(--primary); }
 #hero p { max-width: 660px; font-size: 1.12rem; margin: 0 0 24px; color: #3b4850; }
@@ -50,11 +50,13 @@ section > h2 { text-align: center; font-size: 2rem; color: var(--primary); margi
 .btn-doutor { background-color: #0088cc; color: #fff; }
 #rinite-prick-test { background-color: var(--soft); }
 .rinite-intro { max-width: 860px; margin: 0 auto 30px; text-align: center; font-size: 1.08rem; color: #3b4850; }
-.rinite-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1040px; margin: 30px auto; }
+.rinite-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1040px; margin: 30px auto; }
 .rinite-card, .especialidade-item { background-color: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 22px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
 .rinite-card { border-top: 4px solid var(--green); }
 .rinite-card h3, .especialidade-item h3 { color: var(--primary); margin: 0 0 10px; font-size: 1.12rem; line-height: 1.3; }
 .rinite-card p, .especialidade-item p { margin: 0; color: #3d4b53; }
+.technical-note { max-width: 980px; margin: 20px auto 0; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: 8px; padding: 18px 20px; color: #3d4b53; box-shadow: 0 8px 22px rgba(0,0,0,0.05); }
+.technical-note strong { color: var(--primary); }
 .rinite-cta { text-align: center; margin-top: 30px; }
 .rinite-note { max-width: 760px; margin: 18px auto 0; font-size: 0.96rem; text-align: center; color: var(--muted); }
 #sobre { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(250px, 360px) minmax(0, 1fr); gap: 48px; align-items: center; background-color: #fff; }
@@ -125,25 +127,32 @@ footer a { color: #93d4ff; font-weight: 700; }
 <!-- RINITE E PRICK TEST -->
 <section id="rinite-prick-test">
 <h2>Rinite, alergia respiratória e Prick Test em Maringá</h2>
-<p class="rinite-intro">Avaliação otorrinolaringológica para investigar sintomas nasais recorrentes, suspeita de alergia respiratória e indicação de testes alérgicos, como o Prick Test, quando apropriado.</p>
+<p class="rinite-intro">A rinite alérgica é uma inflamação da mucosa nasal, geralmente mediada por IgE, desencadeada por alérgenos inaláveis. A avaliação busca relacionar sintomas, exposição a gatilhos e exames para definir uma conduta individualizada.</p>
 <div class="rinite-grid">
 <div class="rinite-card">
-<h3>Quando investigar rinite?</h3>
-<p>Espirros, coriza, coceira no nariz e obstrução nasal recorrente podem ter relação com rinite alérgica ou outras causas nasais.</p>
+<h3>Quando investigar rinite alérgica?</h3>
+<p>Obstrução nasal, rinorreia aquosa, espirros em salva e prurido nasal são sintomas típicos. Também são avaliados sono, produtividade, crises recorrentes e associação com conjuntivite, sinusite ou asma.</p>
+</div>
+<div class="rinite-card">
+<h3>Como é feita a avaliação?</h3>
+<p>A consulta considera frequência, intensidade e impacto dos sintomas. A classificação clínica costuma diferenciar quadros intermitentes ou persistentes, leves ou moderados/graves, conforme critérios usados nas diretrizes ARIA.</p>
 </div>
 <div class="rinite-card">
 <h3>O que é o Prick Test?</h3>
-<p>É um teste cutâneo utilizado para avaliar sensibilização a alérgenos. A indicação depende da avaliação médica e do histórico clínico.</p>
+<p>É um teste cutâneo in vivo para avaliar sensibilização a alérgenos. Em geral, os extratos são aplicados na pele, a leitura é feita após 15 a 20 minutos e os controles com histamina e soro fisiológico ajudam na interpretação.</p>
 </div>
 <div class="rinite-card">
-<h3>Para que serve?</h3>
-<p>Pode ajudar a identificar possíveis gatilhos, como ácaros, poeira, pólens, fungos e pelos de animais, orientando um plano individualizado.</p>
+<h3>Quais gatilhos podem ser investigados?</h3>
+<p>Ácaros, poeira, fungos, epitélio de animais, pólens e outros alérgenos podem ser considerados conforme história clínica, ambiente domiciliar, trabalho, sintomas associados e exposição do paciente.</p>
 </div>
+</div>
+<div class="technical-note">
+<strong>Tratamento por etapas:</strong> o manejo pode envolver controle ambiental, lavagem nasal, anti-histamínicos, corticosteroides intranasais, antileucotrienos em situações selecionadas e acompanhamento da resposta clínica. Quando há diagnóstico alergológico confirmado e correlação com os sintomas, a imunoterapia alérgeno-específica também pode ser discutida como opção de tratamento modificador da doença.
 </div>
 <div class="rinite-cta">
 <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+avaliacao+para+rinite+e+Prick+Test+com+o+Dr.+Glauber." class="btn-rinite-whatsapp" target="_blank" rel="noopener" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">Agendar avaliação pelo WhatsApp</a>
 </div>
-<p class="rinite-note">As opções de tratamento são definidas caso a caso. Quando necessário, exames e tratamentos específicos podem ser discutidos conforme disponibilidade e indicação médica.</p>
+<p class="rinite-note">A indicação de exames, medicamentos ou imunoterapia depende da avaliação médica, da correlação entre teste e sintomas e da disponibilidade dos tratamentos em cada caso.</p>
 </section>
 
 <!-- SOBRE O DOUTOR -->
@@ -162,7 +171,7 @@ footer a { color: #93d4ff; font-weight: 700; }
 <h2>O que o Otorrinolaringologista trata</h2>
 <p class="section-intro">Avaliação de sintomas de ouvido, nariz e garganta, com conduta individualizada conforme a história clínica e o exame físico.</p>
 <div class="especialidades-grid">
-<div class="especialidade-item"><h3>Rinite alérgica</h3><p>Reação inflamatória relacionada a alérgenos, como poeira, ácaros e pólens, podendo causar espirros, obstrução nasal, coriza e coceira no nariz.</p></div>
+<div class="especialidade-item"><h3>Rinite alérgica</h3><p>Inflamação nasal frequentemente mediada por IgE, relacionada a alérgenos como ácaros, poeira e pólens. Pode causar espirros, coriza aquosa, prurido e obstrução nasal.</p></div>
 <div class="especialidade-item"><h3>Sinusite (rinossinusite)</h3><p>Inflamação dos seios da face, que pode causar dor facial, nariz entupido e secreção nasal espessa. O tratamento varia conforme a causa.</p></div>
 <div class="especialidade-item"><h3>Otite</h3><p>Inflamação do ouvido externo ou médio, com dor, sensação de ouvido tampado e possível diminuição da audição.</p></div>
 <div class="especialidade-item"><h3>Perda auditiva</h3><p>Pode ocorrer de forma progressiva ou súbita. Avaliação e tratamento específicos são fundamentais.</p></div>
@@ -192,5 +201,18 @@ footer a { color: #93d4ff; font-weight: 700; }
 <p style="font-size:0.8em;color:#c9d6e2;margin-top:10px;">Esta página tem caráter informativo e não substitui uma consulta médica presencial.</p>
 </footer>
 
+<script>
+function scrollToHashTarget() {
+var targetId = decodeURIComponent(window.location.hash.replace('#', ''));
+var target = targetId ? document.getElementById(targetId) : null;
+if (target) {
+target.scrollIntoView({ block: 'start' });
+}
+}
+scrollToHashTarget();
+window.addEventListener('load', scrollToHashTarget);
+setTimeout(scrollToHashTarget, 300);
+setTimeout(scrollToHashTarget, 900);
+</script>
 </body>
 </html>
