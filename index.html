@@ -10,7 +10,7 @@ gtag('js', new Date());
 gtag('config', 'AW-16855928466');
 </script>
 <meta charset="UTF-8">
-<meta name="description" content="Dr. Glauber Tercio de Almeida - Otorrinolaringologista em Maringa. Atende Unimed e particular. Agende pelo WhatsApp.">
+<meta name="description" content="Dr. Glauber Tercio de Almeida - Otorrinolaringologista em Maringa. Avaliacao de rinite alergica, alergias respiratorias e Prick Test. Atende Unimed e particular.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Glauber Tercio de Almeida | Otorrinolaringologista em Maringa | Unimed e Particular</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,8 +27,19 @@ header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
 #hero .hero-buttons a { display: inline-block; padding: 12px 20px; border-radius: 6px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; transition: opacity 0.3s; }
 #hero .hero-buttons a:hover { opacity: 0.85; }
 .btn-whatsapp-hero { background-color: #25d366; color: #fff; font-size: 1.05em; }
+.btn-rinite { background-color: #0b7a75; color: #fff; }
 .btn-especialidade { background-color: #0055aa; color: #fff; }
 .btn-doutor { background-color: #0088cc; color: #fff; }
+#rinite-prick-test { background-color: #eef8f4; padding: 60px 20px; }
+#rinite-prick-test h2 { text-align: center; font-size: 1.8em; color: #003366; margin-bottom: 16px; }
+.rinite-intro { max-width: 860px; margin: 0 auto 28px; text-align: center; font-size: 1.08em; }
+.rinite-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 28px auto; max-width: 980px; }
+.rinite-card { background-color: #fff; border-left: 4px solid #25d366; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.rinite-card h3 { color: #003366; margin-top: 0; margin-bottom: 8px; font-size: 1.12em; }
+.rinite-card p { margin: 0; }
+.rinite-cta { text-align: center; margin-top: 28px; }
+.btn-rinite-whatsapp { display: inline-block; background-color: #25d366; color: #fff; padding: 12px 22px; border-radius: 8px; font-weight: 700; }
+.rinite-note { max-width: 760px; margin: 18px auto 0; font-size: 0.95em; text-align: center; color: #555; }
 #sobre { display: flex; flex-wrap: wrap; align-items: center; padding: 60px 20px; }
 #sobre .sobre-image { flex: 1 1 300px; text-align: center; padding: 10px; }
 #sobre .sobre-image img { width: 100%; max-width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
@@ -48,16 +59,29 @@ footer a { color: #7ec8f7; font-weight: 600; }
 .footer-convenios span { margin: 0 10px; }
 .btn-footer-whatsapp { display: inline-block; margin-top: 12px; background-color: #25d366; color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 1em; }
 html { scroll-behavior: smooth; }
-.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; background-color: #25d366; border-radius: 50%; padding: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background-color: #25d366; border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s; }
 .whatsapp-float:hover { transform: scale(1.1); }
-.whatsapp-float img { display: block; }
+.whatsapp-float svg { display: block; width: 34px; height: 34px; fill: #fff; }
+.whatsapp-float:focus-visible { outline: 3px solid #003366; outline-offset: 3px; }
+@media (max-width: 640px) {
+#hero { padding: 34px 20px 46px; }
+#hero .hero-image img { width: 210px; }
+#hero .hero-text { padding: 10px 0; }
+#hero h1 { font-size: 1.9em; line-height: 1.25; }
+#hero .hero-buttons a { margin-right: 0; }
+#rinite-prick-test { padding: 48px 20px; }
+.whatsapp-float { width: 50px; height: 50px; right: 12px; bottom: 12px; }
+.whatsapp-float svg { width: 30px; height: 30px; }
+}
 </style>
 </head>
 <body>
 
 <!-- Botao flutuante WhatsApp -->
-<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="whatsapp-float" target="_blank" title="Agende pelo WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">
-<img src="logo-novo.png" alt="WhatsApp" width="50" height="50" />
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="whatsapp-float" target="_blank" rel="noopener" title="Agende pelo WhatsApp" aria-label="Agende pelo WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">
+<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+<path d="M16.04 3C9.42 3 4.03 8.37 4.03 14.98c0 2.14.56 4.22 1.64 6.05L4 29l8.18-1.61c1.74.95 3.72 1.45 5.75 1.45h.01c6.62 0 12.01-5.37 12.01-11.98C29.95 8.37 22.66 3 16.04 3Zm0 23.72h-.01c-1.8 0-3.56-.49-5.09-1.42l-.37-.22-4.86.96 1.01-4.74-.24-.39a9.76 9.76 0 0 1-1.5-5.23c0-5.37 4.39-9.74 9.79-9.74 2.62 0 5.08 1.02 6.93 2.86a9.68 9.68 0 0 1 2.87 6.88c0 5.37-4.39 9.74-9.78 9.74Zm5.37-7.28c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.45-2.36-1.44-.87-.78-1.46-1.73-1.64-2.02-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.19-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.01-1.04 2.46s1.07 2.86 1.22 3.05c.15.2 2.1 3.19 5.09 4.47.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.74-.71 1.99-1.39.25-.68.25-1.27.17-1.39-.07-.12-.27-.2-.57-.35Z"/>
+</svg>
 </a>
 
 <!-- HERO -->
@@ -70,10 +94,35 @@ html { scroll-behavior: smooth; }
 <p>Sintomas como nariz entupido, espirros, zumbido, perda auditiva e tonturas devem ser avaliados por um especialista. Agende sua consulta em Maringa.</p>
 <div class="hero-buttons">
 <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-whatsapp-hero" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">&#128241; Agendar pelo WhatsApp</a>
+<a href="#rinite-prick-test" class="btn-rinite">Rinite e Prick Test</a>
 <a href="#especialidades" class="btn-especialidade">Ver especialidades</a>
 <a href="#sobre" class="btn-doutor">Conhecer o doutor</a>
 </div>
 </div>
+</section>
+
+<!-- RINITE E PRICK TEST -->
+<section id="rinite-prick-test">
+<h2>Rinite, alergia respiratoria e Prick Test em Maringa</h2>
+<p class="rinite-intro">Avaliacao otorrino para investigar sintomas nasais recorrentes, suspeita de alergia respiratoria e necessidade de testes alergicos, como o Prick Test, quando indicado na consulta.</p>
+<div class="rinite-grid">
+<div class="rinite-card">
+<h3>Quando avaliar rinite?</h3>
+<p>Espirros, coriza, coceira no nariz, obstrucao nasal e crises repetidas podem ter relacao com rinite alergica ou outras causas nasais.</p>
+</div>
+<div class="rinite-card">
+<h3>O que e o Prick Test?</h3>
+<p>E um teste cutaneo usado para investigar sensibilizacao a alergenios. A indicacao depende da avaliacao medica e do historico clinico.</p>
+</div>
+<div class="rinite-card">
+<h3>Para que serve?</h3>
+<p>Ajuda a identificar possiveis gatilhos, como acaros, poeira, polens, fungos e pelos de animais, orientando um plano individualizado.</p>
+</div>
+</div>
+<div class="rinite-cta">
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+avaliacao+para+rinite+e+Prick+Test+com+o+Dr.+Glauber." class="btn-rinite-whatsapp" target="_blank" rel="noopener" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">&#128241; Agendar avaliacao pelo WhatsApp</a>
+</div>
+<p class="rinite-note">As opcoes de tratamento sao definidas caso a caso. Quando necessario, exames e tratamentos especificos podem ser discutidos conforme disponibilidade e indicacao medica.</p>
 </section>
 
 <!-- SOBRE O DOUTOR -->
@@ -90,7 +139,7 @@ html { scroll-behavior: smooth; }
 <!-- ESPECIALIDADES -->
 <section id="especialidades">
 <h2>O que o Otorrinolaringologista trata</h2>
-<div class="especialidade-item"><h3>&#128067; Rinite Alergica</h3><p>Resposta exagerada a alergenios como poeira, polen e acaros, causando espirros, nariz entupido e coriza. O tratamento inclui medicamentos e imunoterapia.</p></div>
+<div class="especialidade-item"><h3>&#128067; Rinite Alergica</h3><p>Resposta exagerada a alergenios como poeira, polen e acaros, causando espirros, nariz entupido e coriza. O tratamento pode incluir orientacoes ambientais, medicamentos e outras opcoes conforme avaliacao medica.</p></div>
 <div class="especialidade-item"><h3>&#129301; Sinusite (Rinossinusite)</h3><p>Inflamacao dos seios da face causando dor facial, nariz entupido e secrecao nasal espessa. O tratamento varia conforme a causa.</p></div>
 <div class="especialidade-item"><h3>&#128066; Otite</h3><p>Inflamacao do ouvido externo ou medio, causando dor, sensacao de ouvido tampado e diminuicao da audicao.</p></div>
 <div class="especialidade-item"><h3>&#128266; Perda Auditiva</h3><p>Pode ocorrer de forma progressiva ou subita. Avaliacao e tratamento especificos sao fundamentais.</p></div>
