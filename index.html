@@ -10,74 +10,92 @@ gtag('js', new Date());
 gtag('config', 'AW-16855928466');
 </script>
 <meta charset="UTF-8">
-<meta name="description" content="Dr. Glauber Tercio de Almeida - Otorrinolaringologista em Maringa. Avaliacao de rinite alergica, alergias respiratorias e Prick Test. Atende Unimed e particular.">
+<meta name="description" content="Dr. Glauber Tércio de Almeida - Otorrinolaringologista em Maringá. Avaliação de rinite alérgica, alergias respiratórias e Prick Test. Atende Unimed e particular.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Glauber Tercio de Almeida | Otorrinolaringologista em Maringa | Unimed e Particular</title>
+<title>Dr. Glauber Tércio de Almeida | Otorrinolaringologista em Maringá | Unimed e Particular</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
-a { text-decoration: none; color: inherit; }
-header, section, footer { padding: 40px 20px; max-width: 1200px; margin: auto; }
-#hero { display: flex; flex-wrap: wrap; align-items: center; background: #f0f8ff; padding: 60px 20px; }
-#hero .hero-image { flex: 1 1 250px; text-align: center; padding: 10px; }
-#hero .hero-image img { width: 250px; max-width: 100%; border-radius: 10px; }
-#hero .hero-text { flex: 2 1 300px; padding: 10px 20px; }
-#hero h1 { font-size: 2.2em; margin-bottom: 10px; color: #003366; }
-#hero p { font-size: 1.1em; margin-bottom: 20px; }
-#hero .hero-buttons a { display: inline-block; padding: 12px 20px; border-radius: 6px; margin-right: 10px; margin-bottom: 10px; font-weight: 600; transition: opacity 0.3s; }
-#hero .hero-buttons a:hover { opacity: 0.85; }
-.btn-whatsapp-hero { background-color: #25d366; color: #fff; font-size: 1.05em; }
-.btn-rinite { background-color: #0b7a75; color: #fff; }
-.btn-especialidade { background-color: #0055aa; color: #fff; }
-.btn-doutor { background-color: #0088cc; color: #fff; }
-#rinite-prick-test { background-color: #eef8f4; padding: 60px 20px; }
-#rinite-prick-test h2 { text-align: center; font-size: 1.8em; color: #003366; margin-bottom: 16px; }
-.rinite-intro { max-width: 860px; margin: 0 auto 28px; text-align: center; font-size: 1.08em; }
-.rinite-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 28px auto; max-width: 980px; }
-.rinite-card { background-color: #fff; border-left: 4px solid #25d366; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-.rinite-card h3 { color: #003366; margin-top: 0; margin-bottom: 8px; font-size: 1.12em; }
-.rinite-card p { margin: 0; }
-.rinite-cta { text-align: center; margin-top: 28px; }
-.btn-rinite-whatsapp { display: inline-block; background-color: #25d366; color: #fff; padding: 12px 22px; border-radius: 8px; font-weight: 700; }
-.rinite-note { max-width: 760px; margin: 18px auto 0; font-size: 0.95em; text-align: center; color: #555; }
-#sobre { display: flex; flex-wrap: wrap; align-items: center; padding: 60px 20px; }
-#sobre .sobre-image { flex: 1 1 300px; text-align: center; padding: 10px; }
-#sobre .sobre-image img { width: 100%; max-width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-#sobre .sobre-text { flex: 2 1 300px; padding: 10px 20px; }
-#sobre h2 { font-size: 1.8em; color: #003366; margin-bottom: 20px; }
-#especialidades { background-color: #f9f9f9; padding: 60px 20px; }
-#especialidades h2 { text-align: center; font-size: 1.8em; color: #003366; margin-bottom: 40px; }
-.especialidade-item { margin-bottom: 40px; }
-.especialidade-item h3 { font-size: 1.3em; margin-bottom: 10px; }
-.especialidade-item p { font-size: 1.1em; margin: 0; }
-#local { padding: 60px 20px; text-align: center; }
-#local h2 { font-size: 1.8em; color: #003366; margin-bottom: 20px; }
-#local p { font-size: 1.1em; margin-bottom: 5px; }
-footer { background-color: #003366; color: #fff; text-align: center; padding: 30px 20px; font-size: 0.95em; }
-footer a { color: #7ec8f7; font-weight: 600; }
-.footer-convenios { background-color: #002244; padding: 16px 20px; text-align: center; font-size: 1em; font-weight: 600; color: #fff; border-top: 2px solid #25d366; }
-.footer-convenios span { margin: 0 10px; }
-.btn-footer-whatsapp { display: inline-block; margin-top: 12px; background-color: #25d366; color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 1em; }
+:root {
+--primary: #003366;
+--primary-2: #0055aa;
+--teal: #0b7a75;
+--green: #25d366;
+--bg: #f6f9fc;
+--soft: #eef8f4;
+--text: #263238;
+--muted: #5b6770;
+--border: #dbe7ef;
+--shadow: 0 14px 34px rgba(0, 51, 102, 0.12);
+}
+* { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background-color: #25d366; border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s; }
-.whatsapp-float:hover { transform: scale(1.1); }
+body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.65; }
+a { text-decoration: none; color: inherit; }
+section, footer { padding: 64px 24px; }
+section > h2 { text-align: center; font-size: 2rem; color: var(--primary); margin: 0 0 18px; line-height: 1.25; }
+.section-intro { max-width: 780px; margin: 0 auto 34px; text-align: center; color: var(--muted); font-size: 1.04rem; }
+#hero { background: linear-gradient(180deg, #eef7ff 0%, #ffffff 100%); padding: 76px 24px; }
+.hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 56px; align-items: center; }
+#hero .hero-image { text-align: center; }
+#hero .hero-image img { width: 260px; max-width: 100%; background: #fff; border-radius: 8px; padding: 24px; box-shadow: var(--shadow); }
+#hero .eyebrow { display: inline-block; margin: 0 0 12px; color: var(--teal); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+#hero h1 { font-size: 2.6rem; line-height: 1.18; margin: 0 0 16px; color: var(--primary); }
+#hero p { max-width: 660px; font-size: 1.12rem; margin: 0 0 24px; color: #3b4850; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-buttons a, .btn-rinite-whatsapp, .btn-footer-whatsapp { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 22px; border-radius: 8px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s; }
+.hero-buttons a:hover, .btn-rinite-whatsapp:hover, .btn-footer-whatsapp:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0, 51, 102, 0.16); }
+.btn-whatsapp-hero, .btn-rinite-whatsapp, .btn-footer-whatsapp { background-color: var(--green); color: #fff; }
+.btn-rinite { background-color: var(--teal); color: #fff; }
+.btn-especialidade { background-color: var(--primary-2); color: #fff; }
+.btn-doutor { background-color: #0088cc; color: #fff; }
+#rinite-prick-test { background-color: var(--soft); }
+.rinite-intro { max-width: 860px; margin: 0 auto 30px; text-align: center; font-size: 1.08rem; color: #3b4850; }
+.rinite-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1040px; margin: 30px auto; }
+.rinite-card, .especialidade-item { background-color: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 22px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+.rinite-card { border-top: 4px solid var(--green); }
+.rinite-card h3, .especialidade-item h3 { color: var(--primary); margin: 0 0 10px; font-size: 1.12rem; line-height: 1.3; }
+.rinite-card p, .especialidade-item p { margin: 0; color: #3d4b53; }
+.rinite-cta { text-align: center; margin-top: 30px; }
+.rinite-note { max-width: 760px; margin: 18px auto 0; font-size: 0.96rem; text-align: center; color: var(--muted); }
+#sobre { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(250px, 360px) minmax(0, 1fr); gap: 48px; align-items: center; background-color: #fff; }
+#sobre .sobre-image { text-align: center; }
+#sobre .sobre-image img { width: 100%; max-width: 350px; border-radius: 8px; box-shadow: var(--shadow); }
+#sobre h2 { font-size: 2rem; color: var(--primary); margin: 0 0 16px; }
+#sobre p { margin: 0; color: #3d4b53; }
+#especialidades { background-color: #fff; }
+.especialidades-grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+#local { max-width: 1120px; margin: 0 auto; text-align: center; }
+#local p { max-width: 880px; margin: 0 auto 22px; font-size: 1.06rem; color: #3d4b53; }
+#local iframe { border-radius: 8px; box-shadow: var(--shadow); }
+.footer-convenios { background-color: #002244; padding: 24px 20px; text-align: center; font-size: 1rem; font-weight: 600; color: #fff; border-top: 3px solid var(--green); }
+.btn-footer-whatsapp { margin-top: 14px; }
+footer { background-color: var(--primary); color: #fff; text-align: center; font-size: 0.95rem; }
+footer p { max-width: 900px; margin: 0 auto 8px; }
+footer a { color: #93d4ff; font-weight: 700; }
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 100; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background-color: var(--green); border-radius: 50%; box-shadow: 0 8px 18px rgba(0,0,0,0.22); transition: transform 0.2s; }
+.whatsapp-float:hover { transform: scale(1.08); }
 .whatsapp-float svg { display: block; width: 34px; height: 34px; fill: #fff; }
-.whatsapp-float:focus-visible { outline: 3px solid #003366; outline-offset: 3px; }
+.whatsapp-float:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
 @media (max-width: 640px) {
 #hero { padding: 34px 20px 46px; }
+.hero-inner, #sobre { grid-template-columns: 1fr; gap: 28px; }
 #hero .hero-image img { width: 210px; }
-#hero .hero-text { padding: 10px 0; }
-#hero h1 { font-size: 1.9em; line-height: 1.25; }
-#hero .hero-buttons a { margin-right: 0; }
+#hero h1 { font-size: 2rem; }
+.hero-buttons a { width: calc(100% - 68px); max-width: 310px; }
 #rinite-prick-test { padding: 48px 20px; }
+.rinite-grid, .especialidades-grid { grid-template-columns: 1fr; }
 .whatsapp-float { width: 50px; height: 50px; right: 12px; bottom: 12px; }
 .whatsapp-float svg { width: 30px; height: 30px; }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+.hero-inner, #sobre { grid-template-columns: 1fr; }
+.rinite-grid, .especialidades-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 </style>
 </head>
 <body>
 
-<!-- Botao flutuante WhatsApp -->
+<!-- Botão flutuante WhatsApp -->
 <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="whatsapp-float" target="_blank" rel="noopener" title="Agende pelo WhatsApp" aria-label="Agende pelo WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">
 <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
 <path d="M16.04 3C9.42 3 4.03 8.37 4.03 14.98c0 2.14.56 4.22 1.64 6.05L4 29l8.18-1.61c1.74.95 3.72 1.45 5.75 1.45h.01c6.62 0 12.01-5.37 12.01-11.98C29.95 8.37 22.66 3 16.04 3Zm0 23.72h-.01c-1.8 0-3.56-.49-5.09-1.42l-.37-.22-4.86.96 1.01-4.74-.24-.39a9.76 9.76 0 0 1-1.5-5.23c0-5.37 4.39-9.74 9.79-9.74 2.62 0 5.08 1.02 6.93 2.86a9.68 9.68 0 0 1 2.87 6.88c0 5.37-4.39 9.74-9.78 9.74Zm5.37-7.28c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.94 1.16-.17.2-.35.22-.64.07-.29-.15-1.24-.45-2.36-1.44-.87-.78-1.46-1.73-1.64-2.02-.17-.29-.02-.45.13-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.91-2.19-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.01-1.04 2.46s1.07 2.86 1.22 3.05c.15.2 2.1 3.19 5.09 4.47.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.74-.71 1.99-1.39.25-.68.25-1.27.17-1.39-.07-.12-.27-.2-.57-.35Z"/>
@@ -86,86 +104,92 @@ html { scroll-behavior: smooth; }
 
 <!-- HERO -->
 <section id="hero">
+<div class="hero-inner">
 <div class="hero-image">
-<img src="logo-novo.png" alt="Logo Dr. Glauber Tercio de Almeida - Otorrinolaringologista">
+<img src="logo-novo.png" alt="Logo Dr. Glauber Tércio de Almeida - Otorrinolaringologista">
 </div>
 <div class="hero-text">
-<h1>Cuide da saude de seu nariz, ouvido e garganta</h1>
-<p>Sintomas como nariz entupido, espirros, zumbido, perda auditiva e tonturas devem ser avaliados por um especialista. Agende sua consulta em Maringa.</p>
+<p class="eyebrow">Otorrinolaringologia em Maringá</p>
+<h1>Cuide da saúde do seu nariz, ouvido e garganta</h1>
+<p>Sintomas como nariz entupido, espirros, zumbido, perda auditiva e tonturas merecem avaliação especializada. Atendimento em Maringá, com agendamento pelo WhatsApp.</p>
 <div class="hero-buttons">
-<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-whatsapp-hero" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">&#128241; Agendar pelo WhatsApp</a>
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-whatsapp-hero" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">Agendar pelo WhatsApp</a>
 <a href="#rinite-prick-test" class="btn-rinite">Rinite e Prick Test</a>
 <a href="#especialidades" class="btn-especialidade">Ver especialidades</a>
 <a href="#sobre" class="btn-doutor">Conhecer o doutor</a>
+</div>
 </div>
 </div>
 </section>
 
 <!-- RINITE E PRICK TEST -->
 <section id="rinite-prick-test">
-<h2>Rinite, alergia respiratoria e Prick Test em Maringa</h2>
-<p class="rinite-intro">Avaliacao otorrino para investigar sintomas nasais recorrentes, suspeita de alergia respiratoria e necessidade de testes alergicos, como o Prick Test, quando indicado na consulta.</p>
+<h2>Rinite, alergia respiratória e Prick Test em Maringá</h2>
+<p class="rinite-intro">Avaliação otorrinolaringológica para investigar sintomas nasais recorrentes, suspeita de alergia respiratória e indicação de testes alérgicos, como o Prick Test, quando apropriado.</p>
 <div class="rinite-grid">
 <div class="rinite-card">
-<h3>Quando avaliar rinite?</h3>
-<p>Espirros, coriza, coceira no nariz, obstrucao nasal e crises repetidas podem ter relacao com rinite alergica ou outras causas nasais.</p>
+<h3>Quando investigar rinite?</h3>
+<p>Espirros, coriza, coceira no nariz e obstrução nasal recorrente podem ter relação com rinite alérgica ou outras causas nasais.</p>
 </div>
 <div class="rinite-card">
-<h3>O que e o Prick Test?</h3>
-<p>E um teste cutaneo usado para investigar sensibilizacao a alergenios. A indicacao depende da avaliacao medica e do historico clinico.</p>
+<h3>O que é o Prick Test?</h3>
+<p>É um teste cutâneo utilizado para avaliar sensibilização a alérgenos. A indicação depende da avaliação médica e do histórico clínico.</p>
 </div>
 <div class="rinite-card">
 <h3>Para que serve?</h3>
-<p>Ajuda a identificar possiveis gatilhos, como acaros, poeira, polens, fungos e pelos de animais, orientando um plano individualizado.</p>
+<p>Pode ajudar a identificar possíveis gatilhos, como ácaros, poeira, pólens, fungos e pelos de animais, orientando um plano individualizado.</p>
 </div>
 </div>
 <div class="rinite-cta">
-<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+avaliacao+para+rinite+e+Prick+Test+com+o+Dr.+Glauber." class="btn-rinite-whatsapp" target="_blank" rel="noopener" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">&#128241; Agendar avaliacao pelo WhatsApp</a>
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+avaliacao+para+rinite+e+Prick+Test+com+o+Dr.+Glauber." class="btn-rinite-whatsapp" target="_blank" rel="noopener" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">Agendar avaliação pelo WhatsApp</a>
 </div>
-<p class="rinite-note">As opcoes de tratamento sao definidas caso a caso. Quando necessario, exames e tratamentos especificos podem ser discutidos conforme disponibilidade e indicacao medica.</p>
+<p class="rinite-note">As opções de tratamento são definidas caso a caso. Quando necessário, exames e tratamentos específicos podem ser discutidos conforme disponibilidade e indicação médica.</p>
 </section>
 
 <!-- SOBRE O DOUTOR -->
 <section id="sobre">
 <div class="sobre-image">
-<img src="foto-2.jpg" alt="Dr. Glauber Tercio de Almeida">
+<img src="foto-2.jpg" alt="Dr. Glauber Tércio de Almeida">
 </div>
 <div class="sobre-text">
 <h2>Sobre o Dr. Glauber</h2>
-<p>Sou Glauber Almeida, otorrinolaringologista, formado em Medicina pela Universidade Estadual de Maringa, com Residencia Medica em Otorrinolaringologia pela Universidade Estadual de Londrina e Titulo de Especialista pela AMB/ABORL. Atuo em Maringa com foco no diagnostico e tratamento das doencas de ouvido, nariz e garganta, oferecendo um cuidado individualizado e baseado em evidencias.</p>
+<p>Sou Glauber Almeida, otorrinolaringologista, formado em Medicina pela Universidade Estadual de Maringá, com Residência Médica em Otorrinolaringologia pela Universidade Estadual de Londrina e Título de Especialista pela AMB/ABORL. Atuo em Maringá com foco no diagnóstico e tratamento das doenças de ouvido, nariz e garganta, oferecendo um cuidado individualizado e baseado em evidências.</p>
 </div>
 </section>
 
 <!-- ESPECIALIDADES -->
 <section id="especialidades">
 <h2>O que o Otorrinolaringologista trata</h2>
-<div class="especialidade-item"><h3>&#128067; Rinite Alergica</h3><p>Resposta exagerada a alergenios como poeira, polen e acaros, causando espirros, nariz entupido e coriza. O tratamento pode incluir orientacoes ambientais, medicamentos e outras opcoes conforme avaliacao medica.</p></div>
-<div class="especialidade-item"><h3>&#129301; Sinusite (Rinossinusite)</h3><p>Inflamacao dos seios da face causando dor facial, nariz entupido e secrecao nasal espessa. O tratamento varia conforme a causa.</p></div>
-<div class="especialidade-item"><h3>&#128066; Otite</h3><p>Inflamacao do ouvido externo ou medio, causando dor, sensacao de ouvido tampado e diminuicao da audicao.</p></div>
-<div class="especialidade-item"><h3>&#128266; Perda Auditiva</h3><p>Pode ocorrer de forma progressiva ou subita. Avaliacao e tratamento especificos sao fundamentais.</p></div>
-<div class="especialidade-item"><h3>&#127744; Zumbido (Tinnitus)</h3><p>Percepcao de som sem fonte externa, associado a perda auditiva ou estresse. Diversas abordagens podem ajudar.</p></div>
-<div class="especialidade-item"><h3>&#128565; Tontura</h3><p>Pode ter origem vestibular ou nao. Uma avaliacao cuidadosa e essencial para identificar a causa e o tratamento.</p></div>
-<div class="especialidade-item"><h3>&#128567; Amigdalas e Adenoide</h3><p>Problemas nas amigdalas ou adenoides podem causar obstrucao nasal e infeccoes recorrentes. Diagnostico pelo exame fisico e imagem.</p></div>
-<div class="especialidade-item"><h3>&#128558; Ronco e Apneia do Sono</h3><p>Ronco e apneia impactam a qualidade do sono e a saude geral. O tratamento e individualizado conforme avaliacao especializada.</p></div>
+<p class="section-intro">Avaliação de sintomas de ouvido, nariz e garganta, com conduta individualizada conforme a história clínica e o exame físico.</p>
+<div class="especialidades-grid">
+<div class="especialidade-item"><h3>Rinite alérgica</h3><p>Reação inflamatória relacionada a alérgenos, como poeira, ácaros e pólens, podendo causar espirros, obstrução nasal, coriza e coceira no nariz.</p></div>
+<div class="especialidade-item"><h3>Sinusite (rinossinusite)</h3><p>Inflamação dos seios da face, que pode causar dor facial, nariz entupido e secreção nasal espessa. O tratamento varia conforme a causa.</p></div>
+<div class="especialidade-item"><h3>Otite</h3><p>Inflamação do ouvido externo ou médio, com dor, sensação de ouvido tampado e possível diminuição da audição.</p></div>
+<div class="especialidade-item"><h3>Perda auditiva</h3><p>Pode ocorrer de forma progressiva ou súbita. Avaliação e tratamento específicos são fundamentais.</p></div>
+<div class="especialidade-item"><h3>Zumbido</h3><p>Percepção de som sem fonte externa, frequentemente associada a alterações auditivas, tensão ou outros fatores.</p></div>
+<div class="especialidade-item"><h3>Tontura</h3><p>Pode ter origem vestibular ou não. Uma avaliação cuidadosa ajuda a identificar a causa e direcionar o tratamento.</p></div>
+<div class="especialidade-item"><h3>Amígdalas e adenoide</h3><p>Alterações nessas estruturas podem causar obstrução nasal, roncos e infecções recorrentes.</p></div>
+<div class="especialidade-item"><h3>Ronco e apneia do sono</h3><p>Ronco e apneia impactam a qualidade do sono e a saúde geral. A conduta depende de avaliação especializada.</p></div>
+</div>
 </section>
 
 <!-- LOCAL DE ATENDIMENTO -->
 <section id="local">
 <h2>Local de Atendimento</h2>
-<p><strong>Facial Clinic</strong> - Centro Medico Inga - Av. Dr. Luiz Teixeira Mendes, 1798 - Sala 202/203 - Zona 05, Maringa - PR</p>
+<p><strong>Facial Clinic</strong> - Centro Médico Ingá - Av. Dr. Luiz Teixeira Mendes, 1798 - Sala 202/203 - Zona 05, Maringá - PR</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3453574420387!2d-51.9609780613328!3d-23.435537133771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd716494f64b1%3A0x15f6a76b0357c294!2sAv.%20Dr.%20Luiz%20Teixeira%20Mendes%2C%201798%20-%20Zona%2005%2C%20Maring%C3%A1%20-%20PR%2C%2087015-001!5e0!3m2!1spt-BR!2sbr!4v1743648045275!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
-<!-- RODAPE COM CONVENIOS -->
+<!-- RODAPÉ COM CONVÊNIOS -->
 <div class="footer-convenios">
-<div>&#9989; Atende Unimed &nbsp;|&nbsp; &#9989; Particular &nbsp;|&nbsp; &#9989; Outros convenios - consulte disponibilidade</div>
-<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-footer-whatsapp" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">&#128241; Agendar Consulta pelo WhatsApp</a>
+<div>Atende Unimed &nbsp;|&nbsp; Particular &nbsp;|&nbsp; Outros convênios - consulte disponibilidade</div>
+<a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." class="btn-footer-whatsapp" target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">Agendar consulta pelo WhatsApp</a>
 </div>
 
 <footer>
-<p>Dr. Glauber Tercio de Almeida - Otorrinolaringologista | CRM 24537PR | RQE 31190</p>
-<p>Facial Clinic - Maringa PR &nbsp;|&nbsp; <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">WhatsApp (44) 99142-3282</a></p>
-<p style="font-size:0.8em;color:#aaa;margin-top:10px;">Esta pagina tem carater informativo e nao substitui uma consulta medica presencial.</p>
+<p>Dr. Glauber Tércio de Almeida - Otorrinolaringologista | CRM 24537PR | RQE 31190</p>
+<p>Facial Clinic - Maringá PR &nbsp;|&nbsp; <a href="https://wa.me/554491423282?text=Ola,+gostaria+de+agendar+uma+consulta+com+o+Dr.+Glauber." target="_blank" onclick="gtag('event', 'conversion', {'send_to': 'AW-16855928466/0xMBCK6G4K4cEJKdxOU-', 'value': 1.0, 'currency': 'BRL'});">WhatsApp (44) 99142-3282</a></p>
+<p style="font-size:0.8em;color:#c9d6e2;margin-top:10px;">Esta página tem caráter informativo e não substitui uma consulta médica presencial.</p>
 </footer>
 
 </body>
