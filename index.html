@@ -213,6 +213,103 @@ scrollToHashTarget();
 window.addEventListener('load', scrollToHashTarget);
 setTimeout(scrollToHashTarget, 300);
 setTimeout(scrollToHashTarget, 900);
+
+var ADS_CLICK_STORAGE_KEY = 'dr_glauber_ads_click';
+var ADS_CLICK_PARAMS = ['gclid', 'gbraid', 'wbraid'];
+var ADS_CLICK_MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000;
+
+function readTrackingParam(name) {
+var pattern = new RegExp('[?&#]' + name + '=([^&#]+)', 'i');
+var match = window.location.href.match(pattern);
+return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : '';
+}
+
+function getStoredAdsClick() {
+try {
+return JSON.parse(window.localStorage.getItem(ADS_CLICK_STORAGE_KEY) || '{}');
+} catch (error) {
+return {};
+}
+}
+
+function saveStoredAdsClick(data) {
+try {
+window.localStorage.setItem(ADS_CLICK_STORAGE_KEY, JSON.stringify(data));
+} catch (error) {}
+}
+
+function createLeadReference() {
+var timePart = Date.now().toString(36).toUpperCase();
+var randomPart = Math.random().toString(36).slice(2, 6).toUpperCase();
+return 'GA-' + timePart + '-' + randomPart;
+}
+
+function getAdsClickData() {
+var stored = getStoredAdsClick();
+if (stored.clickCapturedAt && Date.now() - Date.parse(stored.clickCapturedAt) > ADS_CLICK_MAX_AGE_MS) {
+stored = {};
+}
+
+var current = {};
+ADS_CLICK_PARAMS.forEach(function(name) {
+var value = readTrackingParam(name);
+if (value) {
+current[name] = value;
+}
+});
+
+var data = Object.assign({}, stored, current);
+if (!data.ref) {
+data.ref = createLeadReference();
+}
+if (Object.keys(current).length > 0 || !data.clickCapturedAt) {
+data.clickCapturedAt = new Date().toISOString();
+}
+data.lastSeenAt = new Date().toISOString();
+
+if (Object.keys(current).length > 0 || !stored.ref) {
+saveStoredAdsClick(data);
+}
+
+return data;
+}
+
+function buildTrackingText(data) {
+var idType = ADS_CLICK_PARAMS.find(function(name) { return data[name]; });
+var lines = [
+'Codigo interno do atendimento: ' + data.ref
+];
+
+if (idType) {
+lines.push('ID do clique Google Ads (' + idType.toUpperCase() + '): ' + data[idType]);
+} else {
+lines.push('Origem do clique: landing page');
+}
+
+return lines.join('\n');
+}
+
+function updateWhatsAppLink(link, adsClickData) {
+var originalUrl = new URL(link.href);
+var baseMessage = link.dataset.baseMessage || originalUrl.searchParams.get('text') || 'Ola, gostaria de agendar uma consulta com o Dr. Glauber.';
+link.dataset.baseMessage = baseMessage;
+
+var trackedMessage = baseMessage + '\n\n' + buildTrackingText(adsClickData);
+originalUrl.searchParams.set('text', trackedMessage);
+link.href = originalUrl.toString();
+}
+
+function updateWhatsAppTrackingLinks() {
+var adsClickData = getAdsClickData();
+document.querySelectorAll('a[href*="wa.me/554491423282"]').forEach(function(link) {
+updateWhatsAppLink(link, adsClickData);
+link.addEventListener('click', function() {
+updateWhatsAppLink(link, getAdsClickData());
+});
+});
+}
+
+updateWhatsAppTrackingLinks();
 </script>
 </body>
 </html>
