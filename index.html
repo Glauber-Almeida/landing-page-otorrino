@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16855928466"></script>
 <script>
+window.DR_GLAUBER_NO_TRACK = /[?&](preview|notrack|no_track)=1(?:&|$)/i.test(window.location.search);
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag(){
+if (!window.DR_GLAUBER_NO_TRACK) {
+dataLayer.push(arguments);
+}
+}
+if (!window.DR_GLAUBER_NO_TRACK) {
+var googleTagScript = document.createElement('script');
+googleTagScript.async = true;
+googleTagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16855928466';
+document.head.appendChild(googleTagScript);
 gtag('js', new Date());
 gtag('config', 'AW-16855928466');
+}
 </script>
 <meta charset="UTF-8">
 <meta name="description" content="Dr. Glauber Tércio de Almeida - Otorrinolaringologista em Maringá. Avaliação de rinite alérgica, alergias respiratórias e Prick Test. Atende Unimed e particular.">
@@ -352,6 +361,9 @@ link.href = originalUrl.toString();
 }
 
 function updateWhatsAppTrackingLinks() {
+if (window.DR_GLAUBER_NO_TRACK) {
+return;
+}
 var adsClickData = getAdsClickData();
 adsClickData.visitSource = getVisitSourceData();
 document.querySelectorAll('a[href*="wa.me/554491423282"]').forEach(function(link) {
