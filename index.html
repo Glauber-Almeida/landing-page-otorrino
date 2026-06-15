@@ -217,6 +217,8 @@ setTimeout(scrollToHashTarget, 900);
 var ADS_CLICK_STORAGE_KEY = 'dr_glauber_ads_click';
 var ADS_CLICK_PARAMS = ['gclid', 'gbraid', 'wbraid'];
 var ADS_CLICK_MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000;
+var VISIT_SOURCE_STORAGE_KEY = 'dr_glauber_visit_source';
+var VISIT_SOURCE_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign'];
 
 function readTrackingParam(name) {
 var pattern = new RegExp('[?&#]' + name + '=([^&#]+)', 'i');
@@ -274,15 +276,65 @@ saveStoredAdsClick(data);
 return data;
 }
 
+function getVisitSourceData() {
+var stored = {};
+try {
+stored = JSON.parse(window.localStorage.getItem(VISIT_SOURCE_STORAGE_KEY) || '{}');
+} catch (error) {}
+
+var current = {};
+VISIT_SOURCE_PARAMS.forEach(function(name) {
+var value = readTrackingParam(name);
+if (value) {
+current[name] = value;
+}
+});
+
+var data = Object.assign({}, stored, current);
+if (Object.keys(current).length > 0) {
+data.lastSeenAt = new Date().toISOString();
+try {
+window.localStorage.setItem(VISIT_SOURCE_STORAGE_KEY, JSON.stringify(data));
+} catch (error) {}
+}
+
+return data;
+}
+
+function getVisitSourceLabel(data) {
+if (!data || !data.utm_source) {
+return '';
+}
+
+var source = String(data.utm_source).toLowerCase();
+var medium = data.utm_medium ? String(data.utm_medium).toLowerCase() : '';
+if (source === 'instagram' && medium === 'bio') {
+return 'Instagram bio';
+}
+
+var parts = [data.utm_source];
+if (data.utm_medium) {
+parts.push(data.utm_medium);
+}
+if (data.utm_campaign) {
+parts.push(data.utm_campaign);
+}
+return parts.join(' / ');
+}
+
 function buildTrackingText(data) {
 var idType = ADS_CLICK_PARAMS.find(function(name) { return data[name]; });
+var sourceLabel = getVisitSourceLabel(data.visitSource);
 var lines = [
 'Codigo interno do atendimento: ' + data.ref
 ];
 
 if (idType) {
 lines.push('ID do clique Google Ads (' + idType.toUpperCase() + '): ' + data[idType]);
-} else {
+}
+if (sourceLabel) {
+lines.push('Origem informada: ' + sourceLabel);
+} else if (!idType) {
 lines.push('Origem do clique: landing page');
 }
 
@@ -301,10 +353,13 @@ link.href = originalUrl.toString();
 
 function updateWhatsAppTrackingLinks() {
 var adsClickData = getAdsClickData();
+adsClickData.visitSource = getVisitSourceData();
 document.querySelectorAll('a[href*="wa.me/554491423282"]').forEach(function(link) {
 updateWhatsAppLink(link, adsClickData);
 link.addEventListener('click', function() {
-updateWhatsAppLink(link, getAdsClickData());
+var refreshedAdsClickData = getAdsClickData();
+refreshedAdsClickData.visitSource = getVisitSourceData();
+updateWhatsAppLink(link, refreshedAdsClickData);
 });
 });
 }
